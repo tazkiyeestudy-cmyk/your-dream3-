@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Your Dream – Belajar Simple Future Tense</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FFFBF2; --surface:#FFFFFF; --ink:#1E2760; --muted:#58608F;
+  --sky:#CFE8FF; --sun:#FFC93C; --coral:#F2584B; --mint:#2FA67A; --line:#E3DDCB;
+  --hero-a:#CFE8FF; --hero-b:#FFFBF2;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10153A; --surface:#1A2152; --ink:#F4F1FF; --muted:#AEB5E6;
+    --sky:#2A3A86; --sun:#FFC93C; --coral:#FF7A6E; --mint:#4FD1A0; --line:#2E3772;
+    --hero-a:#2A3A86; --hero-b:#10153A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10153A; --surface:#1A2152; --ink:#F4F1FF; --muted:#AEB5E6;
+  --sky:#2A3A86; --sun:#FFC93C; --coral:#FF7A6E; --mint:#4FD1A0; --line:#2E3772;
+  --hero-a:#2A3A86; --hero-b:#10153A; color-scheme:dark;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito",system-ui,sans-serif;font-size:18px;line-height:1.6}
+h1,h2,h3{font-family:"Fredoka","Nunito",system-ui,sans-serif;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:6px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;align-items:center;overflow-x:auto;padding-top:8px;padding-bottom:8px}
+nav a{text-decoration:none;font-weight:800;font-size:15px;padding:6px 12px;border-radius:99px;white-space:nowrap}
+nav a:hover{background:var(--sky)}
+nav button{margin-left:auto;font:inherit;background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:4px 12px;cursor:pointer}
+.hero{background:linear-gradient(var(--hero-a),var(--hero-b));padding:56px 0 64px;text-align:center}
+.hero h1{font-size:clamp(3.4rem,15vw,8rem);font-weight:700;letter-spacing:-.02em}
+.hero h1 span{display:block}
+.hero h1 span:last-child{color:var(--coral);transform:rotate(-2deg)}
+.hero p{font-size:1.25rem;margin:16px auto 0;max-width:30ch;color:var(--muted);font-weight:600}
+.jobs{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px}
+.job{background:var(--surface);border:2px solid var(--ink);border-radius:20px;padding:10px 18px;font-family:"Fredoka",sans-serif;font-size:1.15rem;box-shadow:4px 4px 0 var(--sun)}
+.job b{font-size:1.7rem;display:block;line-height:1.2}
+.motto{margin-top:28px;font-weight:800}
+section{padding:56px 0}
+section h2{font-size:clamp(1.9rem,5vw,2.6rem);margin-bottom:8px}
+.lead{color:var(--muted);margin:0 0 24px;max-width:60ch}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.card{background:var(--surface);border:2px solid var(--ink);border-radius:18px;padding:18px 20px}
+.card.sun{background:var(--sun);color:#1E2760}
+.card h3{font-size:1.3rem;margin-bottom:6px}
+.id{color:var(--muted);font-style:italic;font-size:.95rem}
+.card.sun .id{color:#3a3f78}
+.formula{font-family:"Fredoka",sans-serif;font-size:1.25rem;margin:8px 0;padding:10px 12px;border-radius:12px;background:var(--bg);border:1px dashed var(--ink)}
+.pos h3{color:var(--mint)} .neg h3{color:var(--coral)} .qst h3{color:#5B6CFF}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .qst h3{color:#9DA8FF}}
+:root[data-theme="dark"] .qst h3{color:#9DA8FF}
+.ex{display:flex;gap:14px;align-items:center}
+.ex .em{font-size:2.2rem}
+.ex p{margin:0}.ex .en{font-family:"Fredoka",sans-serif;font-size:1.3rem}
+.story{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.story div{padding:12px 16px;border-left:5px solid var(--sun);background:var(--surface);border-radius:0 12px 12px 0}
+.story .en{font-weight:800}
+.story .idn{color:var(--muted)}
+@media (max-width:640px){.story{grid-template-columns:1fr}.story .idn{margin-top:-8px}}
+.tblwrap{overflow-x:auto;border:2px solid var(--ink);border-radius:18px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:420px}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+th{font-family:"Fredoka",sans-serif;background:var(--sky)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-size:1.5rem;width:56px}
+.quiz{background:var(--surface);border:2px solid var(--ink);border-radius:20px;padding:24px;box-shadow:6px 6px 0 var(--sky)}
+.qmeta{display:flex;justify-content:space-between;color:var(--muted);font-weight:800;margin-bottom:6px}
+.bar{height:8px;background:var(--line);border-radius:9px;overflow:hidden;margin-bottom:18px}
+.bar i{display:block;height:100%;background:var(--mint);width:0;transition:width .3s}
+.q{font-family:"Fredoka",sans-serif;font-size:1.45rem;margin-bottom:14px}
+.opts{display:grid;gap:10px}
+.opt{font:inherit;font-weight:700;text-align:left;padding:12px 16px;border-radius:14px;border:2px solid var(--ink);background:var(--bg);color:var(--ink);cursor:pointer}
+.opt:hover:not(:disabled){background:var(--sky)}
+.opt.ok{background:var(--mint);color:#07281c;border-color:var(--mint)}
+.opt.no{background:var(--coral);color:#2a0805;border-color:var(--coral)}
+.fb{min-height:1.6em;margin:14px 0 0;font-weight:800}
+.btn{font:inherit;font-family:"Fredoka",sans-serif;font-size:1.1rem;background:var(--sun);color:#1E2760;border:2px solid var(--ink);border-radius:99px;padding:10px 24px;cursor:pointer;margin-top:14px;box-shadow:3px 3px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.score{font-family:"Fredoka",sans-serif;font-size:3rem}
+.form{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:18px}
+label{font-weight:800;display:grid;gap:4px}
+input{font:inherit;padding:10px 14px;border-radius:12px;border:2px solid var(--ink);background:var(--surface);color:var(--ink)}
+.paper{background:var(--surface);border:2px solid var(--ink);border-radius:18px;padding:22px 26px;font-family:"Fredoka",sans-serif;font-size:1.25rem;line-height:1.9}
+.paper u{text-decoration:none;border-bottom:3px solid var(--sun);padding:0 4px}
+footer{text-align:center;padding:48px 20px 64px;background:var(--sky)}
+footer h2{font-size:2rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a href="#belajar">Tujuan</a><a href="#rumus">Rumus</a><a href="#contoh">Contoh</a><a href="#kosakata">Kosakata</a><a href="#kuis">Kuis</a><a href="#tulis">Tulis impianmu</a>
+  <button id="theme" type="button" aria-label="Ganti tema terang atau gelap">🌓</button>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1><span>YOUR</span><span>DREAM</span></h1>
+  <p>Belajar Simple Future Tense lewat cita-citamu</p>
+  <div class="jobs" aria-label="Contoh cita-cita">
+    <div class="job"><b>🩺</b>Doctor</div><div class="job"><b>👩‍🏫</b>Teacher</div>
+    <div class="job"><b>✈️</b>Pilot</div><div class="job"><b>💼</b>Businessman</div>
+  </div>
+  <p class="motto">Dream big, work hard, never give up!</p>
+</div></header>
+
+<main>
+<section id="belajar"><div class="wrap">
+  <h2>Apa yang akan kita pelajari?</h2>
+  <p class="lead">Empat tujuan belajar untuk hari ini.</p>
+  <div class="grid">
+    <div class="card"><h3>Understand the meaning of dreams</h3><p class="id">Memahami arti impian</p></div>
+    <div class="card"><h3>Learn Simple Future Tense</h3><p class="id">Belajar Simple Future Tense</p></div>
+    <div class="card"><h3>Make sentences about our dreams</h3><p class="id">Membuat kalimat tentang impian</p></div>
+    <div class="card"><h3>Talk about our future plans</h3><p class="id">Membicarakan rencana masa depan</p></div>
+  </div>
+  <div class="card sun" style="margin-top:20px">
+    <h3>What is your dream?</h3>
+    <p style="margin:0"><b>Your dream</b> = impian atau cita-cita, yaitu apa yang ingin kita jadi di masa depan. Misalnya: doctor, teacher, pilot, chef, police officer.</p>
+  </div>
+</div></section>
+
+<section id="rumus" style="background:var(--sky)"><div class="wrap">
+  <h2>Simple Future Tense</h2>
+  <p class="lead" style="color:var(--ink)">Dipakai untuk hal yang akan terjadi di masa depan. <b>will</b> = akan.</p>
+  <div class="grid">
+    <div class="card pos"><h3>Positive (+)</h3><div class="formula">Subject + will + V1</div><p style="margin:0">I will be a doctor.</p></div>
+    <div class="card neg"><h3>Negative (−)</h3><div class="formula">Subject + will not + V1</div><p style="margin:0">I will not give up.</p></div>
+    <div class="card qst"><h3>Question (?)</h3><div class="formula">Will + Subject + V1?</div><p style="margin:0">Will you study hard?</p></div>
+  </div>
+</div></section>
+
+<section id="contoh"><div class="wrap">
+  <h2>Let’s learn the examples!</h2>
+  <p class="lead">Klik kartu mana saja untuk membacakan kalimatnya (jika perangkatmu mendukung suara).</p>
+  <div class="grid" id="examples"></div>
+
+  <h2 style="margin-top:56px">My dream is to be a doctor</h2>
+  <p class="lead">Perkenalan Anna, contoh teks pendek untuk ditiru.</p>
+  <div class="story" id="story"></div>
+</div></section>
+
+<section id="kosakata" style="background:var(--sky)"><div class="wrap">
+  <h2>Vocabulary time</h2>
+  <p class="lead" style="color:var(--ink)">Learn new words!</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th></th><th>English</th><th>Bahasa Indonesia</th></tr></thead>
+    <tbody id="vocab"></tbody>
+  </table></div>
+</div></section>
+
+<section id="kuis"><div class="wrap">
+  <h2>Fun quiz</h2>
+  <p class="lead">10 soal. Pilih jawaban, lalu lihat langsung benar atau salahnya.</p>
+  <div class="quiz" id="quiz" aria-live="polite"></div>
+</div></section>
+
+<section id="tulis" style="background:var(--sky)"><div class="wrap">
+  <h2>My dream, my future</h2>
+  <p class="lead" style="color:var(--ink)">Isi kolom di bawah, lalu kalimatmu tersusun otomatis.</p>
+  <div class="form">
+    <label>My name is<input id="f-name" placeholder="Anna" autocomplete="off"></label>
+    <label>My dream is to be a<input id="f-job" placeholder="doctor" autocomplete="off"></label>
+    <label>I will … every day<input id="f-act" placeholder="study hard" autocomplete="off"></label>
+  </div>
+  <div class="paper" id="paper"></div>
+</div></section>
+</main>
+
+<footer>
+  <h2>Thank you!</h2>
+  <p style="font-weight:800;margin:8px 0 0">Believe in yourself! Your dream can come true!</p>
+</footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = t => t.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+/* Tema */
+try { const t = localStorage.getItem("yd-theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+$("#theme").onclick = () => {
+  const dark = matchMedia("(prefers-color-scheme: dark)").matches;
+  const cur = document.documentElement.dataset.theme || (dark ? "dark" : "light");
+  const next = cur === "dark" ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem("yd-theme", next); } catch (e) {}
+};
+
+/* Contoh kalimat */
+const examples = [
+  ["📚","I will study hard.","Saya akan belajar dengan giat."],
+  ["👩‍🏫","I will be a teacher.","Saya akan menjadi guru."],
+  ["💖","I will help my parents.","Saya akan membantu orang tua saya."],
+  ["🏆","I will achieve my dream.","Saya akan meraih impian saya."]
+];
+function speak(t){ try { if (!window.speechSynthesis) return; speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(t); u.lang = "en-US"; u.rate = .9; speechSynthesis.speak(u); } catch (e) {} }
+$("#examples").innerHTML = examples.map((e,i) =>
+  `<button class="card ex opt" type="button" data-i="${i}" style="font-weight:400"><span class="em">${e[0]}</span><span><p class="en">${e[1]}</p><p class="id">${e[2]}</p></span></button>`).join("");
+$("#examples").onclick = ev => { const b = ev.target.closest("button"); if (b) speak(examples[b.dataset.i][1]); };
+
+/* Cerita Anna */
+const story = [
+  ["Hello, everyone!","Halo, semuanya!"],["My name is Anna.","Nama saya Anna."],
+  ["My dream is to be a doctor.","Impian saya adalah menjadi dokter."],
+  ["I will study hard every day.","Saya akan belajar dengan giat setiap hari."],
+  ["I will help sick people.","Saya akan membantu orang yang sakit."],
+  ["I will make my parents proud.","Saya akan membuat orang tua saya bangga."],
+  ["I will never give up.","Saya tidak akan pernah menyerah."],["Thank you!","Terima kasih!"]
+];
+$("#story").innerHTML = story.map(s => `<div class="en">${s[0]}</div><div class="idn">${s[1]}</div>`).join("");
+
+/* Kosakata */
+const vocab = [["🌟","Dream","Impian"],["🔮","Future","Masa depan"],["📖","Study hard","Belajar dengan giat"],["💪","Work hard","Bekerja keras"],["🎯","Achieve","Meraih"],["🏅","Successful","Sukses"],["🚀","Never give up","Jangan pernah menyerah"]];
+$("#vocab").innerHTML = vocab.map(v => `<tr><td>${v[0]}</td><td><b>${v[1]}</b></td><td>${v[2]}</td></tr>`).join("");
+
+/* Kuis */
+const Q = [
+  ["What does “Your Dream” mean in Indonesian?",["Masa lalu","Cita-cita","Pekerjaan rumah","Liburan"],1,"Your dream = impian atau cita-cita."],
+  ["Complete the sentence: “I ___ be a doctor.”",["am","did","will","was"],2,"Simple Future Tense memakai will."],
+  ["Which sentence uses the Simple Future Tense correctly?",["I will studies hard.","I will study hard.","I studied hard.","I am study hard."],1,"Setelah will, pakai kata kerja bentuk pertama (V1): study."],
+  ["Complete the sentence: “She will ___ a teacher.”",["is","being","be","was"],2,"will + be. Kata kerja setelah will tidak berubah."],
+  ["What is the negative form of “I will give up”?",["I do not will give up.","I will not give up.","I will not gave up.","I not give up."],1,"Negatif: Subject + will not + V1."],
+  ["Choose the correct question in Simple Future Tense.",["Do you be a doctor?","Are you be a doctor?","Will you be a doctor?","Did you be a doctor?"],2,"Pertanyaan: Will + Subject + V1?"],
+  ["What does “study hard” mean?",["Belajar dengan giat","Bermain bersama","Tidur dengan nyenyak","Bekerja di rumah"],0,"Study hard = belajar dengan giat."],
+  ["I will ___ my parents.",["help","helps"],0,"Setelah will, pakai V1: help."],
+  ["My dream is to be a ___.",["doctor","doctors"],0,"Satu profesi: a doctor."],
+  ["I will work hard to ___ my dream.",["achieve","achieves"],0,"Setelah to dan will, pakai V1: achieve."]
+];
+let qi = 0, score = 0, locked = false;
+function render(){
+  const box = $("#quiz");
+  if (qi >= Q.length){
+    const msg = score >= 9 ? "Luar biasa! 🌟" : score >= 7 ? "Bagus sekali! 🎯" : score >= 5 ? "Hampir! Coba lagi ya 💪" : "Ayo belajar lagi, jangan menyerah! 🚀";
+    box.innerHTML = `<div class="qmeta"><span>Selesai</span></div><div class="score">${score} / ${Q.length}</div><p>${msg}</p><button class="btn" id="again" type="button">Main lagi</button>`;
+    $("#again").onclick = () => { qi = 0; score = 0; render(); };
+    return;
+  }
+  const q = Q[qi]; locked = false;
+  box.innerHTML = `<div class="qmeta"><span>Soal ${qi+1} dari ${Q.length}</span><span>Skor ${score}</span></div>
+    <div class="bar"><i style="width:${qi/Q.length*100}%"></i></div>
+    <div class="q">${esc(q[0])}</div>
+    <div class="opts">${q[1].map((o,i)=>`<button class="opt" type="button" data-i="${i}">${String.fromCharCode(97+i)}. ${esc(o)}</button>`).join("")}</div>
+    <p class="fb" id="fb"></p><div id="nx"></div>`;
+  box.querySelectorAll(".opt").forEach(b => b.onclick = () => answer(+b.dataset.i));
+}
+function answer(i){
+  if (locked) return; locked = true;
+  const q = Q[qi], opts = document.querySelectorAll("#quiz .opt");
+  opts.forEach((b,k) => { b.disabled = true; if (k === q[2]) b.classList.add("ok"); else if (k === i) b.classList.add("no"); });
+  if (i === q[2]) score++;
+  $("#fb").textContent = (i === q[2] ? "Benar! " : "Belum tepat. ") + q[3];
+  $("#nx").innerHTML = `<button class="btn" id="next" type="button">${qi === Q.length-1 ? "Lihat skor" : "Soal berikutnya"}</button>`;
+  $("#next").onclick = () => { qi++; render(); };
+  $("#next").focus();
+}
+render();
+
+/* Tulis impianmu */
+function paper(){
+  const v = id => esc($(id).value.trim());
+  const blank = (x, ph) => `<u>${x || ph}</u>`;
+  $("#paper").innerHTML =
+    `My name is ${blank(v("#f-name"),"____________")}.<br>` +
+    `My dream is to be a ${blank(v("#f-job"),"____________")}.<br>` +
+    `I will ${blank(v("#f-act"),"____________")} every day.<br>` +
+    `I will work hard to achieve my dream.<br>I will make my parents proud.`;
+}
+["#f-name","#f-job","#f-act"].forEach(s => $(s).addEventListener("input", paper));
+paper();
+</script>
+</body>
+</html>
